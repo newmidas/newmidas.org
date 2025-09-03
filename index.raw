@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+	 (setq web-mode-markup-indent-offset 2)
+	 (setq web-mode-css-indent-offset 2)
+	 (setq web-mode-code-indent-offset 2)
+-->
+<html>
+  <head>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+    <meta charset="UTF-8">
+
+    <!-- Disable 300ms delay in Chrome and Firefox -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5shiv: HTML5 elements for older versions of IE -->
+    <!-- respond.js: media-queries for older versions of IE -->
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js" integrity="sha512-RCtZMoZSQ5csGk1zBPGImR8OY+NJfe0IsaFrDD649yYrSBgCf3kYiP79AfWT9/idKbpWYteQmswChxbXC7YHig==" crossorigin="anon>
+    <![endif]-->
+
+    <style>
+	 /* Disable 300 millisecond delay in IE */
+	 html{
+	   touch-action:manipulation;
+	   -ms-touch-action:manipulation;
+	 }
+
+	 /* Remove default margin */
+	 /* h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd */
+	 h1, h2, p, ul[class], ol[class], li, {
+	   margin: 0;
+	 }
+
+	 /* Normalize */
+
+	 /* [type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText;outline-offset:-2px}h1{margin:.67em 0} */
+
+	 html {
+	   line-height:1.15;
+	   -webkit-text-size-adjust:100%
+	 }
+
+	 body {
+	   margin:0;
+	 }
+
+	 pre {
+	   font-family: "Lucida Console", "Lucida Sans Typewriter", monospace, monospace;
+	 }
+
+	 a {
+	   background-color:transparent
+	 }
+
+	 b, strong {
+	   font-weight:bolder
+	 }
+
+	 /* Semantic UI reset */
+	 *,*:before,*:after {
+	   box-sizing:inherit
+	 }
+
+	 html {
+	   box-sizing:border-box
+	 }
+
+	 input[type="text"],input[type="email"],input[type="search"],input[type="password"] {
+	   -webkit-appearance:none;-moz-appearance:none
+	 }
+
+	 /* ================================================================================ */
+	 /* Remove all animations and transitions for people that prefer not to see them */
+	 @media (prefers-reduced-motion: reduce) {
+	   * {
+		 animation-duration: 0.01ms !important;
+		 animation-iteration-count: 1 !important;
+		 transition-duration: 0.01ms !important;
+		 scroll-behavior: auto !important;
+	   }
+	 }
+
+	 /* ================================================================================ */
+
+	 h1,h2,h3,h4,h5,h6 { padding: 0; margin: 0 auto; }
+	 html,body,div#root { position: relative; }
+	 body {
+	   overflow-y: scroll;
+	   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, Oxygen-Sans, Helvetica, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	   /* font-family: serif !important; */
+	   letter-spacing: 1px;
+	   line-height: 2;
+	   font-size: 16px;
+	 }
+
+	 @media only screen and (min-width:40em) {
+	   body {
+		 font-size: 17px;
+	   }
+	 }
+
+	 @media only screen and (min-width:52em) {
+	   body {
+		 font-size: 18px;
+	   }
+	 }
+
+	 /* ================================================================================ */
+	 /* Ungrid: https://chrisnager.github.io/ungrid/ */
+
+	 .col {
+	   vertical-align: top;
+	 }
+
+	 @media only screen and (min-width: 40em) {
+	   .row { width: 100%; display: table; table-layout: fixed; }
+	   .col { display: table-cell; text-align: center; }
+	 }
+
+	 p { text-align: left; }
+
+	 .container {
+	   margin: 0 auto 0 auto;
+	   padding: 0 1em 0 1em;
+	   max-width: 100%;
+	 }
+
+	 @media only screen and (min-width: 52em){
+	   .container {
+		 width: 40em;
+	   }
+	 }
+
+	 @media only screen and (min-width: 64em){
+	   .container {
+		 width: 45em;
+	   }
+	 }
+
+	 @media only screen and (min-width: 80em){
+	   .container {
+		 width: 50em;
+	   }
+	 }
+
+	 @media only screen and (min-width: 100em){
+	   .container {
+		 width: 60em;
+	   }
+	 }
+
+	 /* ================================================================================ */
+	 /* Navigation. */
+
+	 .col.nav {
+	   text-align: right;
+	   padding: 0 0 1em 0;
+	 }
+
+	 .col.nav a {
+	   padding: 0.5em 1em;
+	   margin: 0.3em 0 0.3em 0.3em;
+	   text-decoration: none;
+	   text-align: center;
+	   display: inline-block;
+	   font-weight: bold;
+	 }
+
+	 @media only screen and (min-width: 40em) {
+	   .col.nav a {
+		 padding: 0.8em 1.3em;
+		 margin: 1em 0 1em 1em;
+	   }
+	 }
+
+	 /* ================================================================================ */
+	 /* Light/dark themes. */
+
+	 body {
+	   background: white;
+	   color: #333;
+	 }
+
+	 .col.nav a {
+	   color: white;
+	   background: #333;
+	 }
+
+	 .col.nav a:hover {
+	   background: red;
+	 }
+
+	 span.feint {
+	   color: #777;
+	 }
+
+	 @media (prefers-color-scheme: dark) {
+	   body {
+		 background: #100;
+		 color: #db9;
+	   }
+	   .col.nav a {
+		 color: black;
+		 background: #db9;
+	   }
+	   .col.nav a:hover {
+		 background: #c00;
+	   }
+	   span.feint {
+		 color: #864;
+	   }
+	 }
+
+	 /* ================================================================================ */
+	 /* Misc */
+
+	 h1 {
+	   font-size:2em;
+	   line-height: 1;
+	   margin-bottom: 0.5em;
+	 }
+
+	 .title h1 {
+	   font-family: "Ubuntu", Cantarell, Oxygen-Sans, "Verdana", "Lucida Grande", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	   font-weight: normal;
+	 }
+
+	 .title h2 {
+	   font-weight: normal;
+	   font-family: "Times New Roman", "Lucida Bright", serif;
+	   font-style: italic;
+	   line-height: 1.3;
+	 }
+
+	 a.target {
+	   display: inline-block;
+	   height: 0;
+	   width: 0;
+	 }
+
+	 p, li {
+	   line-height: 1.5;
+	 }
+
+	 p {
+	   margin: 0 0 0.5em 0;
+	 }
+
+	 p.indent {
+	   margin-left: 1em;
+	 }
+
+	 div.title {
+	   margin: 1em 0 2em 0;
+	 }
+	 @media only screen and (min-width:40em) {
+	   div.title {
+		 margin: 4em 0;
+	   }
+	 }
+	 div.title * {
+	   text-align: center;
+	 }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+	  <div class="row nav">
+		<div class="col nav">
+		  <!-- link -->
+		</div>
+	  </div>
+    </div><!-- container -->
+
+	<div class="container">
+	  <div class="row">
+		<div class="col">
+		  <div class="title">
+			<h1>New MIDAS</h1>
+			<h2>New&nbsp;Model Institute <span class="feint">for</span> Doctoral Academic&nbsp;Studies</h2>
+		  </div>
+		</div>
+	  </div>
+    </div>
+
+
+    <!-- Automatic polyfills for many features/browsers. -->
+	<!-- Note version 4.8.0 is highest version currently and must be specified to avoid receiving lower versions. -->
+    <script async>
+     if ((navigator || {}).onLine) {
+       if ((((window || {}).location || {}).href || {}).startsWith("http")) {
+         var p = document.createElement('script');
+         p.src = "//cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=default";
+         p.async = true;
+         p.defer = true;
+         p.setAttribute('crossorigin','anonymous')
+         document.head.appendChild(p);
+       }
+     }
+    </script>
+
+  </body>
+</html>
