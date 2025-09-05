@@ -28,8 +28,8 @@
 	 }
 
 	 /* Remove default margin */
-	 /* h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd */
-	 h1, h2, p, ul[class], ol[class], li, {
+	 /* h1, h2, p, ul[class], ol[class], li, */
+	 h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
 	   margin: 0;
 	 }
 
@@ -84,7 +84,6 @@
 
 	 /* ================================================================================ */
 
-	 h1,h2,h3,h4,h5,h6 { padding: 0; margin: 0 auto; }
 	 html,body,div#root { position: relative; }
 	 body {
 	   overflow-y: scroll;
@@ -216,19 +215,31 @@
 	 /* ================================================================================ */
 	 /* Misc */
 
-	 h1 {
-	   font-size:2em;
-	   line-height: 1;
-	   margin-bottom: 0.5em;
+	 h1,h2,h3,h4,h5,h6 {
+	   padding: 0;
+	   margin: 0.8rem 0 0.5rem 0;
+	   border: 0;
+	   text-align: left;
+	   font-family: "Ubuntu", Cantarell, Oxygen-Sans, "Verdana", "Lucida Grande", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	 }
 
+	 h1 { font-size: 1.7rem; font-weight: normal; }
+	 h2 { font-size: 1.6rem; font-weight: normal; }
+	 h3 { font-size: 1.5rem; font-weight: normal; }
+	 h4 { font-size: 1.4rem; font-weight: normal; }
+	 h5 { font-size: 1.3rem; font-weight: normal; font-style: italic; }
+	 h6 { font-size: 1.2rem; font-weight: normal; font-style: italic; }
+
 	 .title h1 {
-	   font-family: "Ubuntu", Cantarell, Oxygen-Sans, "Verdana", "Lucida Grande", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	   line-height: 1;
+	   font-size:2em;
 	   font-weight: normal;
+	   margin: 0 0 0.5em 0;
 	 }
 
 	 .title h2 {
 	   font-weight: normal;
+	   font-size: 1.8rem;
 	   font-family: "Times New Roman", "Lucida Bright", serif;
 	   font-style: italic;
 	   line-height: 1.3;
@@ -245,7 +256,7 @@
 	 }
 
 	 p {
-	   margin: 0 0 0.5em 0;
+	   margin: 0 0 1.5rem 0;
 	 }
 
 	 p.indent {
@@ -262,6 +273,10 @@
 	 }
 	 div.title * {
 	   text-align: center;
+	 }
+
+	 #spacer {
+	   height: 6em;
 	 }
 
     </style>
@@ -290,6 +305,8 @@
 		</div>
 	  </div>
     </div>
+
+	<div id="spacer">...</div>
 
 
     <!-- Automatic polyfills for many features/browsers. -->
