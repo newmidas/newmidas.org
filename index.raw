@@ -215,6 +215,13 @@
 	 /* ================================================================================ */
 	 /* Misc */
 
+	 hr {
+       overflow: visible; /* For IE */
+	   width: 70%;
+	   border-color: silver;
+	   margin: 3rem auto;
+	 }
+
 	 h1,h2,h3,h4,h5,h6 {
 	   padding: 0;
 	   margin: 0.8rem 0 0.5rem 0;
@@ -223,12 +230,12 @@
 	   font-family: "Ubuntu", Cantarell, Oxygen-Sans, "Verdana", "Lucida Grande", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	 }
 
-	 h1 { font-size: 1.7rem; font-weight: normal; }
-	 h2 { font-size: 1.6rem; font-weight: normal; }
-	 h3 { font-size: 1.5rem; font-weight: normal; }
-	 h4 { font-size: 1.4rem; font-weight: normal; }
-	 h5 { font-size: 1.3rem; font-weight: normal; font-style: italic; }
-	 h6 { font-size: 1.2rem; font-weight: normal; font-style: italic; }
+	 h1 { font-size: 1.6rem; font-weight: normal; }
+	 h2 { font-size: 1.4rem; font-weight: normal; }
+	 h3 { font-size: 1.3rem; font-weight: normal; }
+	 h4 { font-size: 1.25rem; font-weight: normal; }
+	 h5 { font-size: 1.2rem; font-weight: normal; font-style: italic; }
+	 h6 { font-size: 1.15rem; font-weight: normal; font-style: italic; }
 
 	 .title h1 {
 	   line-height: 1;
