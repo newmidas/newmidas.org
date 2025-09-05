@@ -2,9 +2,25 @@
 
 set -euo pipefail
 
+errs=0
+for cmd in envsubst pandoc minify ; do
+	command -v "${cmd}" &>/dev/null || {
+		echo "Cannot find ${cmd}." >&2
+		errs=$(($errs+1))
+	}
+done
+
+if [[ "${errs}" -gt 0 ]]; then
+	echo "Quitting!"
+	exit 1
+fi
+
+
 this_dir=$(readlink -qe "$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )")
 wd=$(readlink -qe "${this_dir}"/../)
 
 cd "${wd}"
 
-minify --type html --html-keep-document-tags --html-keep-end-tags index.raw > index.html
+export BODY_HTML=$(pandoc sota.md)
+
+envsubst < index.raw | minify --type html --html-keep-document-tags --html-keep-end-tags > index.html
