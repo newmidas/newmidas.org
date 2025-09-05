@@ -116,6 +116,7 @@
 	 @media only screen and (min-width: 40em) {
 	   .row { width: 100%; display: table; table-layout: fixed; }
 	   .col { display: table-cell; text-align: center; }
+	   .col > * { text-align: initial; }
 	 }
 
 	 p { text-align: left; }
@@ -195,6 +196,14 @@
 	   color: #777;
 	 }
 
+	 abbr::after {
+	   color: #ccc;
+	 }
+
+	 hr {
+	   border-color: #ccc;
+	 }
+
 	 @media (prefers-color-scheme: dark) {
 	   body {
 		 background: #100;
@@ -208,17 +217,36 @@
 		 background: #c00;
 	   }
 	   span.feint {
-		 color: #864;
+		 color: #b97;
+	   }
+	   abbr::after {
+		 color: #db9;
+	   }
+	   hr {
+		 border-color: #b97;
 	   }
 	 }
 
 	 /* ================================================================================ */
 	 /* Misc */
 
+	 abbr {
+	   cursor: help;
+	   margin-right: 0.3rem;
+	 }
+
+	 abbr::after {
+	   display: inline-block;
+	   content: "?";
+	   font-size: 0.7em;
+	   position: absolute;
+	   margin: 0;
+	   color: #999;
+	 }
+
 	 hr {
-       overflow: visible; /* For IE */
+	   overflow: visible; /* For IE */
 	   width: 70%;
-	   border-color: silver;
 	   margin: 3rem auto;
 	 }
 
