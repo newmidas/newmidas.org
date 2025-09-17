@@ -18,6 +18,15 @@ Pellentesque dapibus suscipit ligula. Donec posuere augue in quam. Etiam vel tor
 -  PhD projects -- and over-arching doctoral programmes -- are typically formulated in advance and hence cannot respond to the fast-moving real world.
 
 
+<!--
+
+### Etc
+
+The UKRI has mvde to a "collective talent" model through their "Doctoral Investment Framework": [https://www.ukri.org/news/update-on-collective-talent-funding/](https://www.ukri.org/news/update-on-collective-talent-funding/) -- although it's not very clear what this is, eactly!
+
+-->
+
+
 ## Global picture
 
 Recognition that the number of researchers needs to increase: The UN's ["sustainable development goals"](https://metadata.un.org/sdg/?lang=en) include "Target 9.5: Enhance scientific research... encouraging innovation and substantially increasing the number of research and development workers per 1 million people."
