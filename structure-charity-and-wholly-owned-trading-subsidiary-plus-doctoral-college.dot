@@ -1,0 +1,25 @@
+digraph NewMIDAS_Group {
+    rankdir=TB;
+    node [shape=box];
+
+    subgraph cluster_parent {
+        label = "New MIDAS Charity (Parent)";
+        Charity [label="New MIDAS Charity\n\nResponsibilities:\n- Define mission & strategy\n- Hold group-wide charitable objects\n- Campaign & advocacy on doctoral reform\n- Fund research & software activities\n- Steward relationships with major funders\n- Oversee governance of group entities"];
+    }
+
+    subgraph cluster_trading {
+        label = "New MIDAS Ltd (Trading Subsidiary)";
+        Trading [label="New MIDAS Ltd\n\nResponsibilities:\n- Design & build opinionated software\n- Replace outdated academic workflows\n- Commercialise AI-driven research tools\n- Sell to universities, labs, individuals\n- Generate profits for the Charity\n- Embed fairness, transparency, efficiency"];
+    }
+
+    subgraph cluster_research {
+        label = "New MIDAS Research Institute (Charitable Subsidiary)";
+        Research [label="New MIDAS Research Institute\n\nResponsibilities:\n- Operate doctoral college\n- Design & deliver doctoral training\n- Supervise and support PhD researchers\n- Conduct social science research on doctoral education\n- Publish think-tank style reports & briefings\n- Pursue UKRI / research council funding\n- Build evidence base for reform agenda"];
+    }
+
+    Charity -> Trading [label="100% ownership\n(wholly-owned\ntrading subsidiary)"];
+    Charity -> Research [label="Control / founding\nmember\n(charitable\nsubsidiary)"];
+
+    Trading -> Charity [label="Gift Aid donations\nof distributable profits"];
+    Charity -> Research [label="Grants & strategic\nfunding for\nresearch programmes"];
+}

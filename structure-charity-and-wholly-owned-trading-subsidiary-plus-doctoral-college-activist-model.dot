@@ -1,0 +1,34 @@
+digraph NewMIDAS_ActivistPlatform {
+  rankdir=TB;
+  node [shape=box];
+
+  subgraph cluster_core {
+    label="Core Movement Entity";
+    style=rounded;
+
+    CIC [label="New MIDAS CIC\n\nResponsibilities:\n- Primary public brand and movement platform\n- Sets political strategy and counter-hegemonic narrative\n- Coordinates campaigns on doctoral education reform\n- Holds membership/community governance (if used)\n- Owns 100% of New MIDAS Lab Ltd\n- Enters partnerships with New MIDAS Research (charity)"];
+    
+    LabLtd [label="New MIDAS Lab Ltd (Subsidiary)\n\nResponsibilities:\n- Develops and operates opinionated research software\n- Sells SaaS and services to universities and researchers\n- Licenses IP created within the group\n- Generates commercial surplus for reinvestment in CIC\n- Implements CIC’s values in product design and UX\n- Manages commercial risk separate from CIC and charity"];
+  }
+
+  subgraph cluster_charity {
+    label="Independent Research Charity";
+    style=rounded;
+
+    Charity [label="New MIDAS Research (Charity)\n\nResponsibilities:\n- Conducts independent social science research\n- Hosts doctoral researchers and fellows\n- Produces peer-reviewed outputs and public reports\n- Applies for UKRI/ESRC and foundation funding\n- Maintains research ethics and transparency standards\n- Engages in evidence-based, but politically balanced, advocacy\n  (in line with charity law)"];
+  }
+
+  // Ownership and control
+  CIC -> LabLtd [label="100% ownership\n(shareholder)"];
+  
+  // Partnership / collaboration (non-ownership)
+  CIC -> Charity [style=dashed, label="Strategic partnership\nShared mission, no control"];
+  Charity -> CIC [style=dashed, label="Research informs\nCIC campaigns & narratives"];
+
+  // Funding and commissioning flows (non-ownership)
+  CIC -> Charity [style=dotted, label="Commissions research\n& provides grants\n(arms-length agreements)"];
+  Charity -> CIC [style=dotted, label="Provides findings,\nbriefings, evidence base\nfor CIC advocacy"];
+
+  // Revenue flow
+  LabLtd -> CIC [label="Dividends / surplus\nreinvested in movement"];
+}

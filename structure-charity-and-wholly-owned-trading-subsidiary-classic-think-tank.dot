@@ -1,0 +1,46 @@
+digraph NewMIDAS_Model1 {
+    rankdir=TB;
+
+    subgraph cluster_charity {
+        label="New MIDAS (Charity)";
+        style=rounded;
+
+        CharityCore [label="Board of Trustees\n• Governance & strategy\n• Uphold charitable objects\n• Oversee risk & compliance"];
+
+        ThinkTank [label="Think-Tank / Research\n• Commission & conduct research\n• Publish reports & briefings\n• Host events & policy forums\n• Maintain editorial independence"];
+
+        DoctoralProgramme [label="Doctoral College Programme\n• Host PhD researchers (via validation partner)\n• Supervision & training environment\n• Methods workshops & summer schools\n• Integrate student work into research agenda"];
+
+        Advocacy [label="Advocacy & Campaigning\n• Evidence-based campaigns on doctoral reform\n• Policy engagement & consultations\n• Media commentary & thought leadership"];
+
+        CharityOps [label="Operations & Development\n• Fundraising & grant applications\n• HR, finance, compliance\n• Partnership management"];
+
+        CharityCore -> ThinkTank;
+        CharityCore -> DoctoralProgramme;
+        CharityCore -> Advocacy;
+        CharityCore -> CharityOps;
+    }
+
+    subgraph cluster_trading {
+        label="New MIDAS Lab Ltd (Trading Subsidiary)";
+        style=rounded;
+
+        LabBoard [label="Company Directors\n• Commercial strategy\n• Product & sales oversight\n• Ensure alignment with charity mission"];
+
+        ProductDev [label="Product & Engineering\n• Design opinionated research tools\n• Build & maintain SaaS platform\n• User research with academics & students"];
+
+        Commercial [label="Commercial & Customer Work\n• Institutional licences & support\n• Custom integrations & services\n• Data and SLAs"];
+
+        GiftAid [label="Profit Transfer (Gift Aid)\n• Donate distributable profits to charity\n• Tax-efficient structuring\n• Intercompany agreements"];
+
+        LabBoard -> ProductDev;
+        LabBoard -> Commercial;
+        LabBoard -> GiftAid;
+    }
+
+    CharityCore -> LabBoard [label="100% ownership\n(sole shareholder)"];
+    GiftAid -> CharityOps [label="donations\n(Gift Aid)"];
+
+    ThinkTank -> ProductDev [label="problem definitions\n& feature ideas"];
+    DoctoralProgramme -> ThinkTank [label="doctoral research\n& publications"];
+}
