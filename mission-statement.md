@@ -1,0 +1,2 @@
+- disrupt existing monopolies on knowledge production
+- challenge epistemic gatekeeping
