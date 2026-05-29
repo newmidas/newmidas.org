@@ -22,6 +22,9 @@ wd=$(readlink -qe "${this_dir}"/../)
 cd "${wd}"
 
 export BODY_HTML=$(
+	echo "<hr>"
+    pandoc --strip-comments --wrap none problem-statement.md
+	echo "<hr>"
     pandoc --strip-comments --wrap none --filter pandoc-crossref --citeproc --bibliography literature.bibtex sota.md
 )
 
