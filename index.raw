@@ -207,11 +207,14 @@
 	 @media (prefers-color-scheme: dark) {
 	   body {
 		 background: #100;
-		 color: #db9;
+		 color: #edd;
+	   }
+	   a {
+		 color: red;
 	   }
 	   .col.nav a {
 		 color: black;
-		 background: #db9;
+		 background: #edd;
 	   }
 	   .col.nav a:hover {
 		 background: #c00;
