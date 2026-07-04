@@ -306,14 +306,14 @@
 		  </div>
 		</div>
 	  </div>
+	  <!--
 	  <div class="row">
 		<div class="col">
-		  ${BODY_HTML}
+		  $ { BODY_HTML }
 		</div>
 	  </div>
+		-->
     </div>
-
-	<div id="spacer">...</div>
 
 
     <!-- Automatic polyfills for many features/browsers. -->
